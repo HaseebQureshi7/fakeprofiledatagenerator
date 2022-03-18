@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 100%;
+  /* height: 100vh; */
+}
+
+.profilebg {
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.profilepic {
+  transform: translateY(-20vh);
+  margin-left: 5%;
+}
+
+.profilepic img {
+  width: 20%;
+  border-radius: 100%;
+}
+
+.profiledata {
+  display: flex;
+  flex-direction: row;
+  transform: translateY(-20vh);
+  margin-left: 5%;
+}
+
+.leftside,
+.rightside {
+  width: 50%;
+}
+
+.leftside div,
+.rightside div {
+  margin: 1%;
+}
+
+.rightside {
+  transform: translateY(-10vh);
+}
+
+.leftside h1 {
+  font-size: 3rem;
+}
+
+.nextbutton {
+  transform: translateY(-25vh);
+  float: right;
+  /* position: fixed; */
+  width: 15%;
+  font-size: larger;
   color: white;
+  font-weight: 700;
+  background-color: rgb(27, 122, 231);
+  cursor: pointer;
+  margin-bottom: 5vh;
 }
 
-.App-link {
-  color: #61dafb;
+.nextbutton:hover {
+  background-color: rgb(41, 27, 231);
+  font-size: x-large;
+  transition: all 0.5s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nextbutton:not(:hover) {
+  background-color: rgb(27, 122, 231);
+  font-size: larger;
+  transition: all 0.5s;
+}
+
+.primary {
+  color: black;
+}
+
+.secondary {
+  color: rgb(78, 78, 78);
+}
+
+.else {
+  color: rgb(221, 221, 221);
+}
+
+
+
+
+
+
+@media (orientation: portrait) {
+  
+  .profilepic {
+    transform: translateY(-10vh);
+    margin-left: 5%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .profilepic img {
+    width: 40%;
+    border-radius: 100%;
   }
+
+  .profiledata {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-10vh);
+    margin-left: 5%;
+  }
+
+  .rightside {
+    margin-top: 10vh;
+    transform: translateY(0);
+  }
+
+  .nextbutton {
+    transform: translateY(-25vh);
+    float: right;
+    /* position: fixed; */
+    width: 25%;
+    font-size: larger;
+    color: white;
+    font-weight: 700;
+    background-color: rgb(27, 122, 231);
+    cursor: pointer;
+    margin-bottom: 5vh;
+  }  
+  
 }
