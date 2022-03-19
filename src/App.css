@@ -50,6 +50,10 @@
   margin: 1%;
 }
 
+.profession {
+  text-transform: uppercase;
+}
+
 .rightside {
   transform: translateY(-10vh);
 }
@@ -59,16 +63,21 @@
 }
 
 .nextbutton {
-  transform: translateY(-25vh);
+  /* transform: translateY(-125vh); */
   float: right;
+  margin-right: 2%;
+  text-align: center;
   /* position: fixed; */
   width: 15%;
   font-size: larger;
   color: white;
+  padding: 1%;
+  border-radius: 5%;
   font-weight: 700;
   background-color: rgb(27, 122, 231);
   cursor: pointer;
   margin-bottom: 5vh;
+  animation: buttonLooper 1s alternate infinite;
 }
 
 .nextbutton:hover {
@@ -83,6 +92,20 @@
   transition: all 0.5s;
 }
 
+@keyframes buttonLooper {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.05);
+  }
+}
+
 .primary {
   color: black;
 }
@@ -95,6 +118,10 @@
   color: rgb(221, 221, 221);
 }
 
+secondary {
+  color: rgb(78, 78, 78);
+}
+
 
 
 
@@ -103,12 +130,17 @@
 @media (orientation: portrait) {
   
   .profilepic {
-    transform: translateY(-10vh);
-    margin-left: 5%;
+    transform: translateY(-12vh);
+    text-align: center;
+  }
+
+  .leftside,
+  .rightside {
+    width: 100%;
   }
 
   .profilepic img {
-    width: 40%;
+    width: 50%;
     border-radius: 100%;
   }
 
@@ -117,6 +149,7 @@
     flex-direction: column;
     transform: translateY(-10vh);
     margin-left: 5%;
+    text-align: center;
   }
 
   .rightside {
@@ -125,10 +158,13 @@
   }
 
   .nextbutton {
-    transform: translateY(-25vh);
-    float: right;
-    /* position: fixed; */
-    width: 25%;
+    margin: auto;
+    transform: translateY(0) !important;
+    float: none;
+    text-align: center;
+    width: 50%;
+    border-radius: 5%;
+    padding: 2%;
     font-size: larger;
     color: white;
     font-weight: 700;

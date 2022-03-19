@@ -30,6 +30,15 @@ function Profile(){
     var month = monthList[Math.floor(Math.random() * monthList.length)];
     const  Year = Math.floor(Math.random()*(1990-2005)+2005)
 
+    const age = 2022 - Year
+    
+    const statusLists = ['Single', 'Married', 'Divorced', 'Separated']
+    var status = statusLists[Math.floor(Math.random() * statusLists.length)];
+
+    var fatherfname = fnameList[Math.floor(Math.random() * fnameList.length)];
+    
+    const fathersname = fatherfname + " " + lname
+
     const phoneList = ['9765479865','5432216598','8765543221','9887655432', '9865328754', '9887655432']
     var phone = phoneList[Math.floor(Math.random() * phoneList.length)];
 
@@ -70,6 +79,12 @@ function Profile(){
                     <div className="phonenumber secondary">
                         <h6>+00-{phone}</h6>
                     </div>
+                    <div className="status">
+                        <h5> <secondary>Status : </secondary>{status}</h5>
+                    </div>
+                    <div className="parent">
+                        <h6> <secondary>SO/DO : </secondary>{fathersname}</h6>
+                    </div>
                 </div>
 
                 <div className="rightside">
@@ -86,11 +101,14 @@ function Profile(){
                         <h6>{Day + " " + month + " " + Year}</h6>
                     </div>
                     <br />
-                    <div className="height secondary">
-                        <h5>Height : {footRandNumbers + ',' + inchRandNumbers}</h5>
+                    <div className="height">
+                        <h5><secondary>Height : </secondary>{footRandNumbers + ',' + inchRandNumbers}</h5>
                     </div>
-                    <div className="weight secondary">
-                        <h5>Weight : {WeightRandNumbers} lbs.</h5>
+                    <div className="weight">
+                        <h5><secondary>Weight : </secondary>{WeightRandNumbers} lbs.</h5>
+                    </div>
+                    <div className="age">
+                        <h5><secondary>Age : </secondary>{age}</h5>
                     </div>
                 </div>
             </div>
